@@ -80,13 +80,15 @@ a {
 
 #scroll{
     position:absolute;
-    margin-top:1em;
+    margin-top:1.5em;
     margin-left:0.8em;
     text-align:center;
     transform:rotate(-45deg);
 }
 
 #arrow {
+    
+    
     position: absolute;
     display: block;
     bottom: 1em;
