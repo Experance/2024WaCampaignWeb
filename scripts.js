@@ -46,5 +46,11 @@ function renderPage(num) {
         page.render(renderContext);
     });
 }
-
-
+ 
+ /* Scrolling Event Listener for arrow */
+document.addEventListener('scroll', () => {
+    const scrolled = window.scrollY > 0;
+    const arrow = document.getElementById('arrow');
+    arrow.classList.toggle('fade', scrolled);
+    scrolled ? arrow.style.animation = "none" : arrow.style.animation = "fade_move_down 4s ease-in-out infinite";
+});
