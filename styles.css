@@ -45,7 +45,7 @@ body {
     /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
     background-color: white;
     padding: 10px;
-    background: linear-gradient(#0a3161, #75b8a7);
+    background: linear-gradient(#397eab, #75b8a7);
 }
 
 #pdf-canvas {
@@ -74,3 +74,26 @@ a {
 .hidden {
     display: none;
 }
+
+
+
+.scroll-down {
+    position: absolute;
+    bottom: 1em;
+    display: block;
+    text-align: right;
+    font-size: 20px;
+    z-index: 100;
+    text-shadow: 0;
+    width: 2em;
+    height: 2em;
+    border-bottom: 4px solid #0a3e79;
+    border-right: 4px solid #0a3e79;
+    transform: translate(-50%, 0%) rotate(45deg);
+    animation: fade_move_down 4s ease-in-out infinite;
+  }
+  @keyframes fade_move_down {
+    0%   { transform:translate(0,-5em) rotate(45deg); opacity: 0;  }
+    50%  { opacity: 1;  }
+    100% { transform:translate(0, 2em) rotate(45deg); opacity: 0; }
+  }
