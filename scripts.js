@@ -1,8 +1,8 @@
-import { getDocument, GlobalWorkerOptions } from 'pdf.mjs';
+import { getDocument, GlobalWorkerOptions } from './pdf.mjs';
 
 const url = 'Padres Picks rev 073124-Rev2.pdf';  // URL to your PDF file
 
-GlobalWorkerOptions.workerSrc = 'pdf.worker.mjs';
+GlobalWorkerOptions.workerSrc = './pdf.worker.mjs';
 
 let pdfDoc = null,
     scale = 1.5,
@@ -11,6 +11,7 @@ let pdfDoc = null,
 // Asynchronously download PDF
 getDocument(url).promise.then((pdfDoc_) => {
     pdfDoc = pdfDoc_;
+    console.log("reached")
     renderPages();
 });
 
