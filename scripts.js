@@ -6,7 +6,7 @@ GlobalWorkerOptions.workerSrc = './pdf.worker.mjs';
 
 let pdfDoc = null,
     scale = 1.5,
-    viewer = document.getElementById('pdf-viewer');
+    viewer = document.getElementById('pdf-canvas');
 
 // Asynchronously download PDF
 getDocument(url).promise.then((pdfDoc_) => {
