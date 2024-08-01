@@ -1,11 +1,11 @@
 import { getDocument, GlobalWorkerOptions } from './pdf.mjs';
 
-const url = 'Padres Picks rev 073124-Rev2.pdf';  // URL to your PDF file
+const url = 'Padres Picks rev 071124b 8-1-24.pdf';  // URL to your PDF file
 
 GlobalWorkerOptions.workerSrc = './pdf.worker.mjs';
 
 let pdfDoc = null,
-    scale = 1.5,
+    scale = 8,
     viewer = document.getElementById('pdf-canvas');
 
 // Asynchronously download PDF
@@ -36,6 +36,7 @@ function renderPage(num) {
         const ctx = canvas.getContext('2d');
         canvas.height = viewport.height;
         canvas.width = viewport.width;
+        canvas.style.width = "100%";
 
         const renderContext = {
             canvasContext: ctx,

@@ -5,7 +5,8 @@ body {
     justify-content: center;
     align-items: center;
     /* height: auto; */
-     /* background:  #75b8a7;  */
+     /* background: linear-gradient(#0a3161, #75b8a7); */
+
     overflow: scroll;
     border: none;
 }
@@ -45,6 +46,10 @@ body {
     background-color: white;
     padding: 10px;
     background: linear-gradient(#0a3161, #75b8a7);
+}
+
+#pdf-canvas {
+   zoom: 18.75%;
 }
 
 canvas {
