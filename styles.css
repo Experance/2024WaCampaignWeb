@@ -4,8 +4,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* height: auto; */
-     /* background:  #75b8a7;  */
+    height: 100%;
+     background:  #75b8a7; 
     border: none;
 }
 #title{
