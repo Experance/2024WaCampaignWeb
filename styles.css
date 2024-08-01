@@ -45,6 +45,10 @@ body {
     background: linear-gradient(#397eab, #75b8a7);
 }
 
+#pdf-canvas {
+   zoom: 18.75%;
+}
+
 canvas {
     display: block;
     margin: 0 auto;
