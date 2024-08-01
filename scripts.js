@@ -15,7 +15,7 @@ getDocument(url).promise.then((pdfDoc_) => {
     renderPages().then(() => {
         // Doing things after pdf loads
         document.getElementById("hyperlink").classList.remove('hidden'); // Show the hyperlink after the PDF loads
-        document.body.style.backgroundColor = "#75b8a7"; 
+        // document.body.style.backgroundColor = "#75b8a7"; 
     }).catch((error) => {
         console.error(`Could not get products: ${error}`);
     });

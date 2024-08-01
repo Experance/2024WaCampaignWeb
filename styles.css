@@ -4,8 +4,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* height: auto; */
-     /* background:  #75b8a7;  */
+    height: 100%;
+     background:  #75b8a7; 
     border: none;
 }
 #title{
@@ -46,7 +46,6 @@ body {
     width: 100%;
     height: fit-content;
     /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
-    background-color: white;
     padding: 10px;
     background: linear-gradient(#599ea9, #75b8a7);
 }
@@ -80,13 +79,15 @@ a {
 
 #scroll{
     position:absolute;
-    margin-top:2em;
-    margin-left:1.25em;
+    margin-top:1.5em;
+    margin-left:0.8em;
     text-align:center;
     transform:rotate(-45deg);
 }
 
 #arrow {
+    
+    
     position: absolute;
     display: block;
     bottom: 1em;
