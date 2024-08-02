@@ -1,8 +1,8 @@
-import { getDocument, GlobalWorkerOptions } from './pdf.mjs';
+import { getDocument, GlobalWorkerOptions } from './build/pdf.mjs';
 
 const url = 'PastorsPicksWA.pdf';  // URL to your PDF file
 
-GlobalWorkerOptions.workerSrc = './pdf.worker.mjs';
+GlobalWorkerOptions.workerSrc = './build/pdf.worker.mjs';
 
 let pdfDoc = null,
     scale = 8,
