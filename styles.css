@@ -116,10 +116,17 @@ body {
     
   }
 
-  @media (min-width: 1000px) {
-    .canvas {
-        width: 70%;
+  @media (min-width: 2000px) {
+    #pdf-canvas {
+        zoom: 30%
     }
+    
+}
+
+@media (max-width: 600px) {
+  #pdf-canvas {
+     zoom: 60%;
+  }
 }
 
 a {
