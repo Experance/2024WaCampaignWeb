@@ -57,28 +57,28 @@ document.addEventListener('scroll', () => {
 */
 /* Printing */
 function printPDF(){
-    var iframe = document.createElement('iframe');  
-    var canvas = document.getElementById('pdf-canvas');
-    var pdfFileLocation = canvas.getAttribute('src');
+//     var iframe = document.createElement('iframe');  
+//     var canvas = document.getElementById('pdf-canvas');
+//     var pdfFileLocation = canvas.getAttribute('src');
 
-    iframe.style.visibility = "hidden";
-    iframe.style.display = "none";
-    iframe.src = pdfFileLocation;
-    iframe.name = 'iframe';
+//     iframe.style.visibility = "hidden";
+//     iframe.style.display = "none";
+//     iframe.src = pdfFileLocation;
+//     iframe.name = 'iframe';
 
-    //document.body
-    document.getElementById('pdf-canvas').prepend(iframe);
+//     //document.body
+//     document.getElementById('pdf-canvas').prepend(iframe);
     
-   // iframe.contentWindow.focus();
-    setTimeout(function () {
-        window.frames["iframe"].focus();
-        window.frames["iframe"].print();
-      }, 500);
-   // iframe.contentWindow.print();
-   setTimeout(function () {
-    document.body.removeChild(frame1);
- }, 1500);
-   
+//    // iframe.contentWindow.focus();
+//     setTimeout(function () {
+//         window.frames["iframe"].focus();
+//         window.frames["iframe"].print();
+//       }, 500);
+//    // iframe.contentWindow.print();
+//    setTimeout(function () {
+//     document.body.removeChild(frame1);
+//  }, 1500);
+   window.open('PastorsPicksWA.pdf', '_blank');
     
 }
 
