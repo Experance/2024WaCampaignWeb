@@ -55,3 +55,20 @@ document.addEventListener('scroll', () => {
     arrow.classList.toggle('fade', scrolled);
     scrolled ? arrow.style.animation = "none" : arrow.style.animation = "fade_move_down 4s ease-in-out infinite";
 });
+/* Printing */
+function printPDF(){
+    var iframe = document.createElement('iframe');  
+    var canvas = document.getElementById('pdf-canvas');
+    var pdfFileLocation = canvas.getAttribute('src');
+
+    iframe.style.visibility = "hidden";
+    iframe.style.display = "none";
+    iframe.src = pdfFileLocation;
+
+    document.body.appendChild(iframe);
+
+    iframe.contentWindow.focus();
+    iframe.contentWindow.print();
+}
+
+document.getElementById('printerimg').addEventListener('click', ()=>{printPDF();})
