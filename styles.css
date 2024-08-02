@@ -101,7 +101,7 @@ body {
 }
 
 #pdf-canvas {
-   zoom: 0.1%;
+   zoom: 20%;
 }
 
 canvas {
