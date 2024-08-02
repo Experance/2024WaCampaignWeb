@@ -14,7 +14,7 @@ getDocument(url).promise.then((pdfDoc_) => {
     
     renderPages().then(() => {
         // Doing things after pdf loads
-        document.getElementById("hyperlink").classList.remove('hidden'); // Show the hyperlink after the PDF loads
+        
         document.getElementById("note-container").classList.remove('hidden'); // Show the note after the PDF loads
         // document.body.style.backgroundColor = "#75b8a7"; 
     }).catch((error) => {
@@ -55,31 +55,74 @@ document.addEventListener('scroll', () => {
     scrolled ? arrow.style.animation = "none" : arrow.style.animation = "fade_move_down 4s ease-in-out infinite";
 });
 */
+
+// const browser = getBrowser();
+
+
+
+// function getBrowser() {
+//     const ua = navigator.userAgent;
+
+//     if (ua.indexOf('Firefox') > -1) {
+//         return 'Firefox';
+//     } else if (ua.indexOf('Safari') > -1 && ua.indexOf('Chrome') === -1) {
+//         return 'Safari';
+//     } else if (ua.indexOf('Chrome') > -1) {
+//         return 'Chrome';
+//     } else if (ua.indexOf('MSIE') > -1 || ua.indexOf('Trident/') > -1) {
+//         return 'Internet Explorer';
+//     } else if (ua.indexOf('Edge') > -1) {
+//         return 'Edge';
+//     } else {
+//         return 'Other';
+//     }
+// }
+
 /* Printing */
 function printPDF(){
-//     var iframe = document.createElement('iframe');  
-//     var canvas = document.getElementById('pdf-canvas');
-//     var pdfFileLocation = canvas.getAttribute('src');
+    var iframe = document.createElement('iframe');  
+    var canvas = document.getElementById('pdf-canvas');
+    var pdfFileLocation = canvas.getAttribute('src');
 
-//     iframe.style.visibility = "hidden";
-//     iframe.style.display = "none";
-//     iframe.src = pdfFileLocation;
-//     iframe.name = 'iframe';
+    iframe.style.visibility = "hidden";
+    iframe.style.display = "none";
+    iframe.src = pdfFileLocation;
+    iframe.name = 'iframe';
 
-//     //document.body
-//     document.getElementById('pdf-canvas').prepend(iframe);
+    //document.body
+    document.getElementById('pdf-canvas').prepend(iframe);
     
-//    // iframe.contentWindow.focus();
-//     setTimeout(function () {
-//         window.frames["iframe"].focus();
-//         window.frames["iframe"].print();
-//       }, 500);
-//    // iframe.contentWindow.print();
-//    setTimeout(function () {
-//     document.body.removeChild(frame1);
-//  }, 1500);
-   window.open('PastorsPicksWA.pdf', '_blank');
+   // iframe.contentWindow.focus();
+    setTimeout(function () {
+        window.frames["iframe"].focus();
+        window.frames["iframe"].print();
+      }, 500);
+   // iframe.contentWindow.print();
+   setTimeout(function () {
+    document.body.removeChild(frame1);
+ }, 1500);
+/*
+    console.log(browser)
+    if (browser === 'Safari') {
+        // Code specific to Safari
+
+
+    } else if (browser === 'Chrome') {
+        // Code specific to Chrome
+    } else if (browser === 'Firefox') {
+        // Code specific to Firefox
+    } else if (browser === 'Internet Explorer') {
+        // Code specific to Internet Explorer
+    } else if (browser === 'Edge') {
+        // Code specific to Edge
+    }
+
+window.open('PastorsPicksWA.pdf', '_blank');
+    */
+    
     
 }
+
+    
 
 document.getElementById('printerimg').addEventListener('click', ()=>{printPDF();})
