@@ -110,7 +110,7 @@ a {
 .hidden {
     display: none;
 }
-
+/*
 #scroll{
     position:absolute;
     margin-top:1.5em;
@@ -150,6 +150,7 @@ a {
     opacity:0;
     transition: 2s all ease-out;
   }
+    */
 
   #note-container {
     margin-top: 2.2rem;
