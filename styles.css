@@ -116,9 +116,9 @@ body {
     
   }
 
-  @media (width <= 900px) {
+  @media (width <= 1200px) {
     #pdf-canvas {
-        zoom: 20%
+        zoom: 25%
     }
     
 }
