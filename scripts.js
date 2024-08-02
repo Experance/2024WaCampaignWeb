@@ -37,8 +37,7 @@ document.addEventListener('scroll', () => {
 /* Printing */
 function printPDF(){
     var iframe = document.createElement('iframe');  
-    var canvas = document.getElementById('pdf-canvas');
-    var pdfFileLocation = canvas.getAttribute('src');
+    var pdfFileLocation = "PastorsPicksWA.pdf";
 
     iframe.style.visibility = "hidden";
     iframe.style.display = "none";
