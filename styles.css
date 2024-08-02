@@ -59,14 +59,21 @@ body {
     opacity: 0.8;
 }
 
+#disclaimer_cont{
+    
+}
+
 #disclaimer{
     color:red;
     font-size:x-large;
     
+
 }
 
 #disclaimer_text{
-    font-size:x-small;
+    font-size:larger;
+    
+    
 }
 /* Hide scrollbar for Chrome, Safari and Opera */
 #pdf-viewer::-webkit-scrollbar {
