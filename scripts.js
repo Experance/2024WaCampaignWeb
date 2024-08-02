@@ -1,6 +1,6 @@
 import { getDocument, GlobalWorkerOptions } from './pdf.mjs';
 
-const url = 'Padres Picks rev 071124b 8-1-24.pdf';  // URL to your PDF file
+const url = 'PastorsPicksWA.pdf';  // URL to your PDF file
 
 GlobalWorkerOptions.workerSrc = './pdf.worker.mjs';
 
@@ -26,8 +26,6 @@ async function renderPages() {
     for (let num = 1; num <= pdfDoc.numPages; num++) {
         renderPage(num);
     } 
-    
-    
 }
 
 function renderPage(num) {
@@ -66,12 +64,21 @@ function printPDF(){
     iframe.style.visibility = "hidden";
     iframe.style.display = "none";
     iframe.src = pdfFileLocation;
+    iframe.name = 'iframe';
 
     //document.body
     document.getElementById('pdf-canvas').prepend(iframe);
     
-    iframe.contentWindow.focus();
-    iframe.contentWindow.print();
+   // iframe.contentWindow.focus();
+    setTimeout(function () {
+        window.frames["iframe"].focus();
+        window.frames["iframe"].print();
+      }, 500);
+   // iframe.contentWindow.print();
+   setTimeout(function () {
+    document.body.removeChild(frame1);
+ }, 1500);
+   
     
 }
 
