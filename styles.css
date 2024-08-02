@@ -112,6 +112,9 @@ body {
     margin: 0 auto;
     margin-bottom: 2em;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+
+    max-width: 100%;
+    height: auto;
   }
 
 a {
