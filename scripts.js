@@ -67,10 +67,12 @@ function printPDF(){
     iframe.style.display = "none";
     iframe.src = pdfFileLocation;
 
-    document.body.appendChild(iframe);
-
+    //document.body
+    document.getElementById('pdf-canvas').prepend(iframe);
+    
     iframe.contentWindow.focus();
     iframe.contentWindow.print();
+    
 }
 
 document.getElementById('printerimg').addEventListener('click', ()=>{printPDF();})
