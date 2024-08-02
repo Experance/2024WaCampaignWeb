@@ -123,11 +123,6 @@ body {
     
 }
 
-@media (max-width: 600px) {
-  #pdf-canvas {
-     zoom: 60%;
-  }
-}
 
 a {
     font-size: 2.25rem;
